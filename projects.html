@@ -51,92 +51,6 @@
             box-shadow: 0px 5px 20px #0000009a;
         }
 
-        .profile-container {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            margin-bottom: 2rem;
-        }
-
-        .profile-border {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 3px solid var(--accent);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .profile-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            background-image: url("img/profile.jpg");
-            background-position: center;    /* Centers the image */
-            background-size: cover;         /* Makes image cover the container */
-            background-repeat: no-repeat;
-        }
-
-        .circuit-lines {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .circuit-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-
-        .circuit-line {
-            position: absolute;
-            background: var(--accent);
-        }
-
-        .dot-1 { top: -4px; left: 30%; }
-        .dot-2 { top: -4px; right: 30%; }
-        .dot-3 { bottom: -4px; left: 30%; }
-        .dot-4 { bottom: -4px; right: 30%; }
-        .dot-5 { left: -4px; top: 30%; }
-        .dot-6 { right: -4px; top: 30%; }
-        .dot-7 { left: -4px; bottom: 30%; }
-        .dot-8 { right: -4px; bottom: 30%; }
-
-        .line-1 { top: 0; left: 30%; width: 40%; height: 2px; }
-        .line-2 { bottom: 0; left: 30%; width: 40%; height: 2px; }
-        .line-3 { left: 0; top: 30%; height: 40%; width: 2px; }
-        .line-4 { right: 0; top: 30%; height: 40%; width: 2px; }
-
-        .code-placeholder {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--accent);
-            font-size: 0.8rem;
-            text-align: center;
-            opacity: 0.7;
-            width: 80%;
-        }
-
-        .code-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;  /* This will fit the entire image within the square */
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
         .social-links {
             display: flex;
             gap: 1.5rem;
@@ -191,14 +105,15 @@
             color: var(--accent);
         }
 
-        .hero {
+        .projects {
             min-height: 70vh;
             display: flex;
             align-items: center;
-            padding-top: 200px;
+            padding-top: 150px;
+            padding-bottom: 50px;
         }
 
-        .hero-content {
+        .projects-content {
             max-width: 800px;
             display: flex;
             flex-direction: column;
@@ -207,7 +122,7 @@
             width: 100%;
         }
 
-        .hero-content h1 {
+        .projects-content h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
@@ -215,70 +130,40 @@
             text-shadow: 5px 5px 5px rgba(2, 2, 2, 0.489);
         }
 
-        .hero-content p {
+        .projects-content p {
             font-size: 1rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s forwards;
             opacity: 0;
+            margin-left: 30px;
+            text-align: left;
         }
 
-        .code-block {
-            background-color: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .code-block::before {
-            content: '</>';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: var(--accent);
-            opacity: 0.2;
-            font-size: 2rem;
-        }
-
-        .projects {
-            padding: 5rem 0;
-        }
-
-        .project-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
-        .project-card {
-            background-color: var(--bg-secondary);
-            padding: 2rem;
+        .project {
+            background-color: #141414;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            width: 400px;
+            height: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
+        .project h3 {
+            text-align: left;
+            font-family: "Inconsolata", serif;
+            font-weight: normal;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill-tag {
-            background-color: rgba(151, 153, 153, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
         }
 
         @keyframes fadeInUp {
@@ -291,29 +176,6 @@
                 transform: translateY(0);
             }
         }
-
-        .terminal {
-            background-color: #1a1a1a;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .terminal-header {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .terminal-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .dot-red { background-color: #ff5f56; }
-        .dot-yellow { background-color: #ffbd2e; }
-        .dot-green { background-color: #27c93f; }
 
         .cursor {
             display: inline-block;
@@ -334,7 +196,7 @@
             <a href="index.html" class="logo">{RF}</a>
             <div class="nav-container">
                 <div class="nav-links">
-                    <a href="projects.html">Projects</a>
+                    <a href="index.html">About</a>
                     <!-- <a href="#blog">Blog</a>
                     <a href="#contact">Contact</a> -->
                 </div>
@@ -362,70 +224,83 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="projects">
         <div class="container">
-            <div class="hero-content">
-                <div class="profile-container">
-                    <div class="profile-border">
-                        <div class="profile-photo">
-                            <div class="code-placeholder">
-                                <img src="img/profile.jpg">
-                            </div>
-                        </div>
-                        <div class="circuit-lines">
-                            <div class="circuit-dot dot-1"></div>
-                            <div class="circuit-dot dot-2"></div>
-                            <div class="circuit-dot dot-3"></div>
-                            <div class="circuit-dot dot-4"></div>
-                            <div class="circuit-dot dot-5"></div>
-                            <div class="circuit-dot dot-6"></div>
-                            <div class="circuit-dot dot-7"></div>
-                            <div class="circuit-dot dot-8"></div>
-                            <div class="circuit-line line-1"></div>
-                            <div class="circuit-line line-2"></div>
-                            <div class="circuit-line line-3"></div>
-                            <div class="circuit-line line-4"></div>
-                        </div>
+            <div class="projects-content">
+                <h1>&lt;Project Log&gt;</h1>
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Training a (Robot) Dog</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"Training the Unitree-Go2 to interact with deformable objects in confined spaces using RL and graph neural networks."</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
                     </div>
-                </div>
-
-                <h1>Rida Faraz</h1>
-                <p>Hello, world! I'm an undergraduate student at the University of Southern California pursuing Computer Engineering/Computer Science. My interests lie in AI/ML and developing socially responsible technology.</p>
-                
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-dot dot-red"></div>
-                        <div class="terminal-dot dot-yellow"></div>
-                        <div class="terminal-dot dot-green"></div>
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Reading Emotions</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"Utilizing deep learning techniques, such as CNNs, to classify emotions from an image of a facial expression."</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
                     </div>
-                    <div class="terminal-content">
-                        <span style="color: #a39f9f;">$ </span>
-                        <span id="typed-text"></span>
-                        <span class="cursor"></span>
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Energy Fluent</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"Combat climate change with Energy Fluent, an app that tracks user's daily emissions and uses EchoAR and Unity to display them."</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects container">
-        <h2>&lt;Featured Projects&gt;</Featured></h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Energy Fluent &#127793;</h3>
-                <p>Fighting climate change through energy conservation, one kilowatt at a time.</p>
-                <div class="skills">
-                    <span class="skill-tag">EchoAR</span>
-                    <span class="skill-tag">Unity</span>
-                    <span class="skill-tag">C#</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Facial Expression Recognition &#127917;</h3>
-                <p>Training a neural network to accurately classify human emotions.</p>
-                <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Convolutional Neural Network</span>
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Spot It!</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"Spot It! is a parking assistant that uses crowd-sourcing and real time data to provide the optimal parking spot for users."</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
+                    </div>
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Blossom</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"A self-learning productivity app that reads user's schedules and plans their day. (Also my first ever hackathon!)"</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
+                    </div>
+                    <div class="project">
+                        <h3>
+                            <span style="color: #c99400;">def</span> 
+                            <span style="color: #FFFFFF;">Tarobot</span> 
+                            <span style="color: #024aa3;">&#123;</span>
+                        </h3>
+                        <p>
+                            <span style="color: #c99400;">return</span>
+                            <span style="color: rgb(23, 147, 23);">"FIRST Tech Challenge award winning robot. Using OpenCV, I created its autonomous functionality."</span>
+                        </p>
+                        <h3 style="color: #024aa3">&#125</h3>
+                    </div>
                 </div>
             </div>
         </div>
