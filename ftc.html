@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rida Faraz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #242424;
+            --bg-secondary: #030303;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(8, 8, 8, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            box-shadow: 0px 5px 20px #0000009a;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .project-details h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            font-family: "Inconsolata", serif;
+            font-weight: normal;
+        }
+
+        .project-details {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            background-color: #2b2b2b; /* Grey background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            margin-bottom: 50px;
+            background-color: var(--bg-primary);
+        }
+
+        .carousel {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            width: max-content;
+        }
+
+        .carousel img {
+            height: 400px;
+            width: 600px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .info-block {
+            background-color: #000000; /* Black background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .info-block h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: "Inconsolata", serif;
+            font-size: 1.5rem;
+        }
+
+        .info-block p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Add hover effect to info blocks */
+        .info-block:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">{RF}</a>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <!-- <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/rfaraz" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rida-faraz" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:ridaffaraz@gmail.com" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>
+            <span style="color: #c99400;">import </span>
+            <span style="color: white;">&lt;Tarobot&gt;</span>
+        </h1>
+        <a href="https://www.canva.com/design/DAF1k3o9gEQ/kT8nkVL9_oB5d5wWdVQAQg/view?utm_content=DAF1k3o9gEQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ec0de6578" target="_blank">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Replace these with your actual project images -->
+                    <img src="img/teamtaro.jpg" alt="Team Taro Photo">
+                    <img src="img/tarobot-field.jpg" alt="Robot on Playing Field">
+                    <img src="img/ftc-award.jpg" alt="FTC Award">
+                    <img src="img/ftc-action.jpg" alt="Drivers and Controllers">
+                    <img src="img/tarobot.PNG" alt="Robot">
+                </div>
+            </div>
+        </a>
+
+        <div class="project-info">
+            <div class="info-block">
+                <h2>FIRST Tech Challenge - Team Taro</h2>
+                <p>I competed in the FIRST Tech Challenge with Team Taro as a member of the software subteam. My specific responsibilities were programming the autonomous functionality of the robot. Each challenge consists of a series of game rules, and our objective was to build a robot that could maximize points during the game. Through this competition, I got a lot of exposure to the extremely tedious yet rewarding design process, as well as how to piece together hardware components to create a fully functioning autonomous robot.</p>
+                <p>Key skills:</p>
+                <p>• OpenCV and Java<br>
+                    • Hardware Design (Servos, Motors, Tetrix Beams)<br>
+                    • Android Studios<br>
+                    • Tinkercad</p>
+            </div>
+            <div class="info-block">
+                <h2>Development Process</h2>
+                <p>Unlike a lot of the other projects I worked on, this project spanned the course of a few months and had a hard deadline at the end (competition day). The lights go out as soon as the competition video is released. My team met together and watched the game guidelines and started brainstorming immediately. We proceeded to finalize the design in the next few weeks, thinking of how we can optimize the robot features. This included determining which chassis would work best for the field terrain, which input would be best to collect the objects of the game, and what output we would need to maximize our score while playing the game. Once the plan was made, parts were ordered and roles were established. This year's competition had an autonomous period, where the robot would need to read April tags on a cone placed ahead of it and use the information to travel to a designated location. This utilized computer vision, which I implemented and tested over a period of a few weeks. While the software subteam waited for the robot to be prepared for testing, I helped assemble important components such as the linear slides and the motors on the main chassis. Through many sleepless nights, we worked up to a working robot that performed well at competition and even got us the following awards at Qualifying and NorCal Regional tournaments.</p>
+                <p>Awards:</p>
+                <p>• Design Award (Qualifying)<br>
+                    • 3rd Place Inspire Award (Qualifying)<br>
+                    • Connect Award (Qualifying) <br>
+                    • Think Award (Regionals)</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Double the carousel images for seamless loop
+            const carousel = document.querySelector('.carousel');
+            const images = carousel.querySelectorAll('img');
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        });
+
+        document.addEventListener()
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rida Faraz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #242424;
+            --bg-secondary: #030303;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(8, 8, 8, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            box-shadow: 0px 5px 20px #0000009a;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .project-details h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            font-family: "Inconsolata", serif;
+            font-weight: normal;
+        }
+
+        .project-details {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            background-color: #2b2b2b; /* Grey background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 50px;
+            background-color: #2b2b2b;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-container video {
+            width: 700px;
+            height: 100%;
+            display: block;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .info-block {
+            background-color: #000000; /* Black background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .info-block h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: "Inconsolata", serif;
+            font-size: 1.5rem;
+        }
+
+        .info-block p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Add hover effect to info blocks */
+        .info-block:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">{RF}</a>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <!-- <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/rfaraz" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rida-faraz" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:ridaffaraz@gmail.com" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>
+            <span style="color: #c99400;">import </span>
+            <span style="color: white;">&lt;Training a (Robot) Dog&gt;</span>
+        </h1>
+        <div class="video-container">
+            <div class="video-overlay"></div>
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="/api/placeholder/1200/400">
+                <!-- Replace the src with your actual video file -->
+                <source src="img/go2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="project-info">
+            <div class="info-block">
+                <h2>Training Quadrupeds to Manipulate Deformable Objects</h2>
+                <p>I'm currently conducting this research under the USC Sensing, Learning, and Understanding Robotic Manipulation (SLURM) Lab. This project involves taking a Unitree-Go2 and training it to fold deformable objects (objects like rope or fabric) into a desired state. Being able to predict the behavior of these objects can help it achieve everyday tasks like tying a rope or folding clothes. The primary goal for this project is to create a strong benchmark for training a quadruped.</p>
+                <p>Key skills:</p>
+                <p>• Reinforcement Learning & Graph Neural Networks<br>
+                    • PyBullet, MuJoCo (Physics simulation environments)<br>
+                    • Python programming</p>
+            </div>
+            <div class="info-block">
+                <h2>Development Process</h2>
+                <p>If there's anything that this project has taught me, it's that research is a very iterative process. To start off, our team was simulating the Go2 in the MuJoCo simulation environment, which posed many difficulties when accurately replicating deformable objects. I tackled this by experimenting with various workarounds, such as modifying joint constraints, adjusting friction parameters, and integrating external physics models. When initial attempts failed to produce stable interactions, I researched past projects and academic papers to identify alternative approaches. Through continuous iteration, I got a satisfactory model. Yet, after that, it turned out that MuJoCo would not be necessary for the project, as there was a working MPC (Motion Planning Control) algorithm that would work in another environment, PyBullet. Scrapping MuJoCo, I learned the inner workings of this new environment, calculating many physical properties of the Go2 to accurately replicate it in simulation. With a working Go2 that can interact with deformable objects, my next step is to train a graph neural network to accurately predict the state of the deformable object given a robot interaction. This involves using the models of tools like Adaptigraph and adapting it to the task at hand.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Double the carousel images for seamless loop
+            const carousel = document.querySelector('.carousel');
+            const images = carousel.querySelectorAll('img');
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        });
+    </script>
+</body>
+</html>
