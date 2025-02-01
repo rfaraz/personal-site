@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rida Faraz | Software Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #242424;
@@ -17,7 +22,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
 
         body {
@@ -41,6 +48,7 @@
             background-color: rgba(8, 8, 8, 0.9);
             backdrop-filter: blur(10px);
             z-index: 100;
+            box-shadow: 0px 5px 20px #0000009a;
         }
 
         .profile-container {
@@ -203,10 +211,12 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            font-family: "Inconsolata", serif;
+            text-shadow: 5px 5px 5px rgba(2, 2, 2, 0.489);
         }
 
         .hero-content p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s forwards;
@@ -380,7 +390,7 @@
                 </div>
 
                 <h1>Rida Faraz</h1>
-                <p>Software & AI/ML Developer</p>
+                <p>Hello, world! I'm an undergraduate student at the University of Southern California pursuing Computer Engineering/Computer Science. My interests lie in AI/ML and developing socially responsible technology.</p>
                 
                 <div class="terminal">
                     <div class="terminal-header">
@@ -411,12 +421,11 @@
                 </div>
             </div>
             <div class="project-card">
-                <h3>Project Beta</h3>
-                <p>Real-time data visualization dashboard</p>
+                <h3>Facial Expression Recognition &#127917;</h3>
+                <p>Training a neural network to accurately classify human emotions.</p>
                 <div class="skills">
-                    <span class="skill-tag">D3.js</span>
-                    <span class="skill-tag">WebSocket</span>
                     <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Convolutional Neural Network</span>
                 </div>
             </div>
         </div>
