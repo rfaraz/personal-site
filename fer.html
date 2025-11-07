@@ -124,26 +124,12 @@
             text-align: center;
         }
 
-        .carousel-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            height: 400px;
-            margin-bottom: 50px;
-            background-color: #2b2b2b;
-        }
-
-        .carousel {
-            display: flex;
-            animation: scroll 20s linear infinite;
-            width: max-content;
-        }
-
-        .carousel img {
+        img {
             height: 400px;
             width: 600px;
             object-fit: cover;
             margin-right: 20px;
+            margin-bottom: 50px;
         }
 
         @keyframes scroll {
@@ -256,18 +242,10 @@
             <span style="color: #c99400;">import </span>
             <span style="color: white;">&lt;Reading Emotions&gt;</span>
         </h1>
-        <a href="https://www.canva.com/design/DAF1k3o9gEQ/kT8nkVL9_oB5d5wWdVQAQg/view?utm_content=DAF1k3o9gEQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ec0de6578" target="_blank">
-            <div class="carousel-container">
-                <div class="carousel">
-                    <!-- Replace these with your actual project images -->
-                    <img src="img/fer-poster.png" alt="Project Poster">
-                    <img src="img/cais24.jpg" alt="CAIS++ Group Photo">
-                    <!-- Duplicate images for seamless loop -->
-                    <img src="img/fer-poster.png" alt="Project Poster">
-                    <img src="img/cais24.jpg" alt="CAIS++ Group Photo">
-                </div>
-            </div>
-        </a>
+
+        <div>
+            <img src="img/cais24.jpg" alt="ShowCAIS S25">
+        </div>
 
         <div class="project-info">
             <div class="info-block">
@@ -281,6 +259,11 @@
             <div class="info-block">
                 <h2>Development Process</h2>
                 <p>After having completed my first semester as a part of CAIS++, I was determined to showcase the expertise I gained through curriculum. Like all machine learning, I knew my first step in solving this problem statement would be searching for good data. For this step, I took to Kaggle to explore what they had to offer, and the one that stood out to me most was the facial expression recognition data set. This stood out to me for two reasons: I would need to use a CNN to address this problem which I was excited to try and no one was able to get a high accuracy. As I iterated through the process of creating a CNN with high accuracy, I realized that there were limitations to the data set that resulted in low accuracy. Despite the challenges, I ended up producing an accuracy score of 70%. Through the process, I realized the importance of data selection, as mapping out the distribution of emotion classes showed that some emotions did not have any data to represent them. Those emotions were the same emotions that the model consistently performed poorly on.</p>
+            </div>
+            
+            <div class="info-block">
+                <h2>S24 ShowCAIS++</h2>
+                <iframe src="img/cais24.pdf#toolbar=0" title="iTextbooks Paper Submission" width="100%" height="600px" style="border: none;"></iframe>
             </div>
         </div>
     </section>

@@ -250,21 +250,19 @@
             <span style="color: #c99400;">import </span>
             <span style="color: white;">&lt;Training a (Robot) Dog&gt;</span>
         </h1>
-        <a href="https://www.canva.com/design/DAGkiZ5Mqvg/kQGAJoEbyz-NhzH1EvNtEg/view?utm_content=DAGkiZ5Mqvg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h39d9abc68d" target="_blank">
-            <div class="video-container">
-                <div class="video-overlay"></div>
-                <video 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline
-                    poster="/api/placeholder/1200/400">
-                    <!-- Replace the src with your actual video file -->
-                    <source src="img/go2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </a>
+        <div class="video-container">
+            <div class="video-overlay"></div>
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="/api/placeholder/1200/400">
+                <!-- Replace the src with your actual video file -->
+                <source src="img/go2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <div class="project-info">
             <div class="info-block">
@@ -278,6 +276,10 @@
             <div class="info-block">
                 <h2>Development Process</h2>
                 <p>If there's anything that this project has taught me, it's that research is a very iterative process. To start off, our team was simulating the Go2 in the MuJoCo simulation environment, which posed many difficulties when accurately replicating deformable objects. I tackled this by experimenting with various workarounds, such as modifying joint constraints, adjusting friction parameters, and integrating external physics models. When initial attempts failed to produce stable interactions, I researched past projects and academic papers to identify alternative approaches. Through continuous iteration, I got a satisfactory model. Yet, after that, it turned out that MuJoCo would not be necessary for the project, as there was a working MPC (Motion Planning Control) algorithm that would work in another environment, PyBullet. Scrapping MuJoCo, I learned the inner workings of this new environment, calculating many physical properties of the Go2 to accurately replicate it in simulation. With a working Go2 that can interact with deformable objects, my next step is to train a graph neural network to accurately predict the state of the deformable object given a robot interaction. This involves using the models of tools like Adaptigraph and adapting it to the task at hand.
+            </div>
+            <div class="info-block">
+                <h2>S25 CURVE Showcase</h2>
+                <iframe src="img/curve25.pdf#toolbar=0" title="iTextbooks Paper Submission" width="100%" height="600px" style="border: none;"></iframe>
             </div>
         </div>
     </section>
