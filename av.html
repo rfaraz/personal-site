@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rida Faraz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #242424;
+            --bg-secondary: #030303;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(8, 8, 8, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            box-shadow: 0px 5px 20px #0000009a;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .project-details h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            font-family: "Inconsolata", serif;
+            font-weight: normal;
+        }
+
+        .project-details {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            background-color: #2b2b2b; /* Grey background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .video-container {
+            width: 100%;
+            margin-bottom: 50px;
+            background-color: #2b2b2b;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .info-block {
+            background-color: #000000; /* Black background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .info-block h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: "Inconsolata", serif;
+            font-size: 1.5rem;
+        }
+
+        .info-block p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Add hover effect to info blocks */
+        .info-block:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .video-container audio {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">{RF}</a>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <!-- <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/rfaraz" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rida-faraz" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:ridaffaraz@gmail.com" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>
+            <span style="color: #c99400;">import </span>
+            <span style="color: white;">&lt;AV Trolley Problem&gt;</span>
+        </h1>
+        
+        <div class="video-container">
+            <audio 
+                controls
+                poster="/api/placeholder/1200/400">
+                <!-- Replace the src with your actual video file -->
+                <source src="img/av-podcast.mp3" type="audio/mpeg">
+                Your browser does not support the video tag.
+            </audio>
+        </div>
+
+        <div class="project-info">
+            <div class="info-block">
+                <h2>Podcast on The Future of Self-Driving Vehicles</h2>
+                <p>My peers and I gathered together to film a podcast on the future of autonomous vehicles. This project was solely driven by curiosity. What are autonomous vehicles, and what do they mean for us in the future? As we start to see this technology enter our roads, there are a lot of ethical and social questions that arise. Through thorough research on the industry, ranging from recent news articles to academic publications, we informed ourselves on the primary discussions arising as a result of the increasing prominence of the AV industry. Our exploration actually led us to the CEO of the Autonomous Vehicle Industry Association (AVIA), Jeff Farrah. We had a conversation with him and had him join us to share his personal insights on where he sees the industry going in upcoming years.</p>
+            </div>
+            <div class="info-block">
+                <h2>Key Takeaways</h2>
+                <p>• The ultimate goal of these AV companies is a "driverless future" where AVs replace the need for driving.<br>
+                    • There are many benefits to adopting these vehicles from environmental impact to increased safety.<br>
+                    • These vehicles have become more prominent due to recent innovations in lidar technology.<br>
+                    • There is skepticism from the public due to the threat that these vehicles pose to jobs and personal freedom.<br>
+                    • There is still a lot of uncertainty as we currently enter a phase of adoption where human drivers and autonomous vehicles share the roads. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Double the carousel images for seamless loop
+            const carousel = document.querySelector('.carousel');
+            const images = carousel.querySelectorAll('img');
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        });
+    </script>
+</body>
+</html>

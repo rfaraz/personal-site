@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rida Faraz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #242424;
+            --bg-secondary: #030303;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(8, 8, 8, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            box-shadow: 0px 5px 20px #0000009a;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .project-details h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            font-family: "Inconsolata", serif;
+            font-weight: normal;
+        }
+
+        .project-details {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            background-color: #2b2b2b; /* Grey background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            margin-bottom: 50px;
+            background-color: var(--bg-primary);
+        }
+
+        .carousel {
+            display: flex;
+            width: max-content;
+        }
+
+        img {
+            height: 400px;
+            width: 600px;
+            object-fit: cover;
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .info-block {
+            background-color: #000000; /* Black background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .info-block h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: "Inconsolata", serif;
+            font-size: 1.5rem;
+        }
+
+        .info-block p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Add hover effect to info blocks */
+        .info-block:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">{RF}</a>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <!-- <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/rfaraz" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rida-faraz" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:ridaffaraz@gmail.com" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>
+            <span style="color: #c99400;">import </span>
+            <span style="color: white;">&lt;LLM Story Time&gt;</span>
+        </h1>
+
+        <div>
+            <img src="img/cais25.JPG" alt="ShowCAIS S25">
+        </div>
+
+        <div class="project-info">
+            <div class="info-block">
+                <h2>Enhancing LLM Story Generation with Knowledge Graph and Multi-agent Framework</h2>
+                <p>LLMs do not handle context well. When generating long form content such as novels, they perform poorly simply because they forget prior connections between characters and events. As a result, I set out to address this issue by determining how these foundational LLMs can be augmented with knowledge graphs for better story generation. My team and I proposed a framework that utilizes agentic AI tools to iteratively write chapters, generate knowledge graphs, and reference these knowledge graphs when writing subsequent chapters. Alongside the framework, we worked on developing a benchmark to compare existing LLM story generation with our augmented workflow. Once determining how to accurately evaluate our framework, we found that our framework showed promising results. I'd share them right now, but I wouldn't want to spoil the paper that we wrote to summarize our findings!</p>
+                <p>Key skills:</p>
+                <p>• Agentic AI<br>
+                    • LLM Augmentation<br>
+                    • RAG</p>
+            </div>
+            <div class="info-block">
+                <h2>Development Process</h2>
+                <p>The first step of this project was establishing a benchmark to determine the state of existing LLM narrative generation. After exploring various LLMs such as Gemini, Claude, and ChatGPT, we were able to generate a couple of narratives to serve as a baseline. We then collected a series of short stories including "Little Red Riding Hood" and "The Lorax" to use as benchmarks of "human" narratives. From there, we began to build out the multi-agent framework. That was when our first hurdle was reached: Autogen. While Autogen is an extremely powerful tool, it is extremely unpredictable. Our framework involved a coder agent to generate the knowledge graph of entities and relationships, a writer agent to pull from these knowledge graphs and write the narrative, and a grapher agent to help visualize the generated knowledge graphs. While the workflow was successful for the first few generated chapters, the coder agent would stop creating thorough knowledge graphs or the writer agent would get stuck. After scrolling through many forums and any documentation we could get our hands on, we worked through debugging these errors and writing prompts to ensure a smooth workflow. Essentially, the agents need to be more aware of the overall order of execution and need to run explicit checks before proceeding to do their task. Once the agentic framework was finally built out, we could acquire some samples. We also found it better to equip the LLM with common story archetypes such as "Rags to Riches". With our samples collected, the last bottleneck that arose was evaluation. Evaluating these stories was extremely challenging due to narrative generation being objective. Through another literature review, we found UNION as an evaluation metric and ran tests using this approach.</p>
+            </div>
+            <div class="info-block">
+                <h2>iTextbooks Paper Submission</h2>
+                <iframe src="img/iTextbooks.pdf#toolbar=0" title="iTextbooks Paper Submission" width="100%" height="600px" style="border: none;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Double the carousel images for seamless loop
+            const carousel = document.querySelector('.carousel');
+            const images = carousel.querySelectorAll('img');
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        });
+
+        document.addEventListener()
+    </script>
+</body>
+</html>
